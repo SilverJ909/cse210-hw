@@ -1,0 +1,44 @@
+Journal Program:
+Class: Prompt
+Attributes:
+    _list : list<string>
+
+Behaviors:
+    Display() : void
+
+Class: LoadFile
+Attributes:
+    _fileName : string
+    _fileData : string
+
+Behaviors:
+    LoadFile : void
+    DisplayData : void
+
+Class: SaveFile
+Attributes:
+    _fileName : string
+    _fileData : string
+    _dataToAdd : string
+    _saveStatus : string
+
+Behaviors:
+    SaveFile : void
+    DisplayMsg : void
+
+Class: Entry
+Attributes:
+    _entry : string
+    _prompt : Prompt()
+
+Behaviors:
+    Prompt : void
+    SaveEntry : void
+
+Class: Menu
+Attributes:
+    _list : list<string>
+
+Behaviors:
+    Display() : void
+
