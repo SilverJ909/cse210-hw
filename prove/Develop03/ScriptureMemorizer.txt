@@ -1,0 +1,41 @@
+Class: Scripture
+    Attributes:
+    -_reference:Reference
+    -_text:string
+    Behaviors:
+    -GetText():string
+    -HideWords()
+    -IsCompletelyHidden(word : Word):bool
+    Constructors:
+    -Scripture()
+    -Scripture(reference : Reference)
+
+Class: Reference
+
+    Attributes:
+    -_book:string
+    -_chapter:int
+    -_verse:int
+    Behaviors:
+    -SetBook(book : string)
+    -GetBook()
+    -SetChapter(chapter : int)
+    -GetChapter()
+    -SetVerse(verse: int)
+    -GetVerse()
+    -GetReference(book : string, chapter : int, verse : int)
+    Constructors:
+    -Reference()
+    -Reference(book : string,chapter : int,verse : int)
+
+Class: Word
+    Attributes:
+    -_word:string
+    Behaviors:
+    -Hide()
+    -Show()
+    -IsHidden():bool
+    -GetRenderedText()
+    Constructors:
+    -Word()
+    -Word(word : string)
