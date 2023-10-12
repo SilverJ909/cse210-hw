@@ -3,9 +3,9 @@ Class: Scripture
     -_reference:Reference
     -_text:string
     Behaviors:
-    -GetText():string
-    -HideWords()
-    -IsCompletelyHidden(word : Word):bool
+    -GetText():string //Returns _text
+    -HideWords() //Hides words from _text string
+    -IsCompletelyHidden(word : Word):bool //returns true or false depending on if the word is hidden
     Constructors:
     -Scripture()
     -Scripture(reference : Reference)
@@ -17,13 +17,13 @@ Class: Reference
     -_chapter:int
     -_verse:int
     Behaviors:
-    -SetBook(book : string)
-    -GetBook()
-    -SetChapter(chapter : int)
-    -GetChapter()
-    -SetVerse(verse: int)
-    -GetVerse()
-    -GetReference(book : string, chapter : int, verse : int)
+    -SetBook(book : string) //Sets the _book to book 
+    -GetBook() : string //Returns the _book string
+    -SetChapter(chapter : int) // Set _chapter to chapter
+    -GetChapter() : int //Returns _chapter int
+    -SetVerse(verse: int) //Set _verse to verse
+    -GetVerse() : int //Returns _verse int
+    -GetReference() : string //Return a string in a "_book _chapter:_verse" format 
     Constructors:
     -Reference()
     -Reference(book : string,chapter : int,verse : int)
@@ -32,10 +32,10 @@ Class: Word
     Attributes:
     -_word:string
     Behaviors:
-    -Hide()
-    -Show()
-    -IsHidden():bool
-    -GetRenderedText()
+    -Hide() //Hides the word 
+    -Show() //Shows the word if hidden
+    -IsHidden():bool //Returns true or false
+    -GetRenderedText() //returns _word
     Constructors:
     -Word()
     -Word(word : string)
