@@ -7,6 +7,9 @@ class Program
         int menuChoice = 0;
         DateTime time = DateTime.Now;
         DateTime futureTime;
+        int timesBreathing = 0;
+        int timesReflecting = 0;
+        int timesListing = 0;
 
         while (menuChoice != 4)
         {
@@ -38,6 +41,7 @@ class Program
                     Console.WriteLine();
                 }
                 breathingActivity.DisplayEndMessage();
+                timesBreathing += 1;
             }
             else if (menuChoice == 2)
             {
@@ -54,6 +58,7 @@ class Program
                     reflectionActivity.GetQuestions();
                 }
                 reflectionActivity.DisplayEndMessage();
+                timesReflecting += 1;
             }
             else if (menuChoice == 3)
             {
@@ -72,6 +77,7 @@ class Program
                 Console.WriteLine($"You listed {listingActivity.ReturnNumberItemsEntered()} items");
                 Console.WriteLine();
                 listingActivity.DisplayEndMessage();
+                timesListing += 1;
             }
             
             Console.Clear();
@@ -79,6 +85,9 @@ class Program
             if (menuChoice == 4)
             {
                 Console.WriteLine("Goodbye");
+                Console.WriteLine($"Breathing Activities done: {timesBreathing}");
+                Console.WriteLine($"Reflecting Activities done: {timesReflecting}");
+                Console.WriteLine($"Listing Activities done: {timesListing}");
             }
         }
     }
