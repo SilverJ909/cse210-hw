@@ -1,0 +1,2 @@
+0
+SimpleGoal:Talk,Speak in Sacrament meeting when asked,100ChecklistGoal:Attend,Attend and perform any ordinance,50,500,3,0
