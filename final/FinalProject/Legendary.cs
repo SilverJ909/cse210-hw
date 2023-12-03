@@ -1,4 +1,4 @@
 using System;
 
-public class Legendary : Pokemon
+public class Legendary 
 {}

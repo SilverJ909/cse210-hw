@@ -1,4 +1,4 @@
 using System;
 
-public class Starter : Pokemon
+public class Starter
 {}
