@@ -24,30 +24,19 @@ public class Stats
     }
 
 
-    public int GetAttack()
+    public void SetHealth(int health)
     {
-        return _attack;
-    }
-    public int GetDefense()
-    {
-        return _defense;
-    }
-    public int GetSpeed()
-    {
-        return _speed;
-    }
-    public int GetSpecialAttack()
-    {
-        return _specialAttack;
-    }
-    public int GetSpecialDefense()
-    {
-        return _specialDefense;
+        _health = health;
     }
 
     public void AddTotal()
     {
         _total=_accuracy+_attack+_defense+_health+_specialAttack+_specialDefense+_speed;
+    }
+
+    public void GetStatInfo()
+    {
+        Console.WriteLine($"Health:{_health} / Attack:{_attack} / Defense:{_defense} / Speed:{_speed} / Special Attack:{_specialAttack} / Special Defense:{_specialDefense} / Total:{_total}");
     }
 
     public int GetTotal()

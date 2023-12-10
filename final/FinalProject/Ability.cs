@@ -9,4 +9,15 @@ public class Ability
     {
         _ability = name;
     }
+
+    public void MakeDescription()
+    {
+        Console.Write($"What is the {_ability}'s description?: ");
+        _description = Console.ReadLine();
+    }
+
+    public string GetAbilityInfo()
+    {
+        return $"{_ability}: {_description}";
+    }
 }

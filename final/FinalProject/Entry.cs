@@ -27,4 +27,9 @@ public class Entry
     {
         return _description;
     }
+
+    public string DiplayEntry()
+    {
+        return $"{_entryNum}: {_description}";
+    }
 }
