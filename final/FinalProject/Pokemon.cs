@@ -173,17 +173,29 @@ public class Pokemon
 
     public void SaveEntries(StreamWriter outputFile, StreamWriter outputFile2, StreamWriter outputFile3, StreamWriter outputFile4) 
     {
-        outputFile.WriteLine(DisplayInformation());
-
-        outputFile2.WriteLine(_entry.DiplayEntry());
-
-        outputFile3.Write($"No. {_entry.GetEntryNumber()}: ");
-        for(int i=0;i<_location.GetCount();i++)
+        using (outputFile)
         {
-            outputFile3.Write(_location.DisplayLocation(i));
+            outputFile.WriteLine(DisplayInformation());
         }
-        outputFile3.WriteLine();
+        
+        using(outputFile2)
+        {
+            outputFile2.WriteLine(_entry.DiplayEntry());
+        }
 
-        outputFile4.WriteLine($"No. {_entry.GetEntryNumber()}: {_ability.GetAbilityInfo()}");
+        using(outputFile3)
+        {
+            outputFile3.Write($"No. {_entry.GetEntryNumber()}: ");
+            for(int i=0;i<_location.GetCount();i++)
+            {
+                outputFile3.Write(_location.DisplayLocation(i));
+            }
+            outputFile3.WriteLine();
+        }
+
+        using(outputFile4)
+        {
+            outputFile4.WriteLine($"No. {_entry.GetEntryNumber()}: {_ability.GetAbilityInfo()}");
+        }
     }
 }
