@@ -26,7 +26,6 @@ public class Pokemon
         _name=name;
         _pokemon=pokemon;
         _eggGroup=eggGroup;
-        _type="";
         _secondType=null;
     }
 
@@ -37,6 +36,10 @@ public class Pokemon
     public string GetPokemon()
     {
         return _pokemon;
+    }
+    public string GetType()
+    {
+        return _type;
     }
     public string GetEggGroup()
     {
