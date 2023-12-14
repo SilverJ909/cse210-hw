@@ -30,8 +30,9 @@ class Program
         }
         else if (kind==2)
         {
-            pokedex = new Starter(name,pokemon, eggGroup);
+            Starter starter = new Starter(name,pokemon, eggGroup);
             starter.SetProfessor();
+            pokedex = starter;
         }
         else if(kind == 3)
         {
