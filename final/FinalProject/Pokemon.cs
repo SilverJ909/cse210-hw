@@ -38,10 +38,6 @@ public class Pokemon
     {
         return _pokemon;
     }
-    public string GetType()
-    {
-        return _type;
-    }
     public string GetEggGroup()
     {
         return _eggGroup;
